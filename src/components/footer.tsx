@@ -1,4 +1,4 @@
-import {FaGithub} from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
 
 export function Footer() {
   return (

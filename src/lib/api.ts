@@ -31,7 +31,7 @@ api.interceptors.request.use((config) => {
   const token = localStorage.getItem("access_token")?.replace(/^"|"$/g, "");
   const orgId = localStorage.getItem("active_org_id")?.replace(/^"|"$/g, "");
 
-  if (token && token!== 'undefined') {
+  if (token && token !== "undefined") {
     config.headers.Authorization = `Bearer ${token}`;
   }
 
@@ -41,9 +41,6 @@ api.interceptors.request.use((config) => {
 
   return config;
 });
-
-
-
 
 // Intercept 401s
 api.interceptors.response.use(
@@ -76,9 +73,9 @@ api.interceptors.response.use(
         const refreshToken = localStorage.getItem("refresh_token");
 
         const { data } = await axios.post(
-          `${baseURL}/authentication/refresh`,
+          `${baseURL}/v1/authentication/refresh`,
           { refresh_token: refreshToken },
-          { headers: { "Content-Type": "application/json" } }
+          { headers: { "Content-Type": "application/json" } },
         );
 
         const newAccessToken = data.access_token;
@@ -101,5 +98,5 @@ api.interceptors.response.use(
     }
 
     return Promise.reject(error);
-  }
+  },
 );

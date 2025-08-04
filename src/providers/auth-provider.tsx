@@ -1,6 +1,6 @@
-import {type FC, type ReactNode} from "react";
-import {AuthContext} from "@/context/auth.ts";
-import {api} from "@/lib/api.ts";
+import { type FC, type ReactNode } from "react";
+import { AuthContext } from "@/context/auth.ts";
+import { api } from "@/lib/api.ts";
 
 /*
 interface User {
@@ -15,7 +15,6 @@ export interface AuthContextType {
   //handleError: (error: unknown) => void;
 }
 
-
 interface AuthProviderProps {
   children: ReactNode;
 }
@@ -29,8 +28,8 @@ export const AuthProvider: FC<AuthProviderProps> = ({
     try {
       const response = await api.post("/v1/authentication/login", {
         email,
-        password
-      })
+        password,
+      });
 
       const { access_token, refresh_token } = response.data;
       localStorage.setItem("access_token", JSON.stringify(access_token));
@@ -43,4 +42,3 @@ export const AuthProvider: FC<AuthProviderProps> = ({
 
   return <AuthContext value={{ login }}>{children}</AuthContext>;
 };
-

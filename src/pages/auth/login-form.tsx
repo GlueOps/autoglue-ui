@@ -8,7 +8,7 @@ import { toast } from "sonner";
 import { Label } from "@/components/ui/label.tsx";
 import { Input } from "@/components/ui/input.tsx";
 import { Button } from "@/components/ui/button.tsx";
-import {useAuth} from "@/hooks/use-auth.ts";
+import { useAuth } from "@/hooks/use-auth.ts";
 
 const loginSchema = z.object({
   email: z.email("Invalid email address"),

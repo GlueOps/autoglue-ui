@@ -6,57 +6,57 @@ import {
   KeyIcon,
   ServerIcon,
   SettingsIcon,
-  UsersIcon
+  UsersIcon,
 } from "lucide-react";
-import {AiOutlineCluster} from "react-icons/ai";
+import { AiOutlineCluster } from "react-icons/ai";
 
 export const items = [
   {
-    label: 'Dashboard',
+    label: "Dashboard",
     icon: HomeIcon,
-    to: '/dashboard',
+    to: "/dashboard",
   },
   {
-    label: 'Core',
+    label: "Core",
     icon: BrainCogIcon,
     items: [
       {
-        label: 'Cluster',
-        to: '/core/cluster',
-        icon: AiOutlineCluster
-      }
-    ]
+        label: "Cluster",
+        to: "/core/cluster",
+        icon: AiOutlineCluster,
+      },
+    ],
   },
   {
-    label: 'Settings',
+    label: "Settings",
     icon: SettingsIcon,
     items: [
       {
-        label: 'Credentials',
-        to: '/settings/credentials',
-        icon: KeyIcon
+        label: "Credentials",
+        to: "/settings/credentials",
+        icon: KeyIcon,
       },
       {
-        label: 'Servers',
-        to: '/settings/servers',
-        icon: ServerIcon
+        label: "Servers",
+        to: "/settings/servers",
+        icon: ServerIcon,
       },
       {
-        label: 'Organizations',
+        label: "Organizations",
         icon: Building2Icon,
         items: [
           {
-            label: 'Organizations',
-            to: '/settings/orgs',
-            icon: BuildingIcon
+            label: "Organizations",
+            to: "/settings/orgs",
+            icon: BuildingIcon,
           },
           {
-            label: 'Members',
-            to: '/settings/members',
-            icon: UsersIcon
-          }
-        ]
-      }
-    ]
-  }
-]
+            label: "Members",
+            to: "/settings/members",
+            icon: UsersIcon,
+          },
+        ],
+      },
+    ],
+  },
+];
