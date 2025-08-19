@@ -20,7 +20,7 @@ export const MemberManagement = () => {
 
   const removeMember = (userId: string) => {
     api.delete(`/v1/orgs/members/${userId}`).then(() => {
-      setMembers((prev) => prev.filter((m: any) => m.id !== userId));
+      setMembers((prev) => prev.filter((m: any) => m.user_id !== userId));
     });
   };
 
@@ -46,7 +46,7 @@ export const MemberManagement = () => {
                 <TableCell>
                   <Button
                     variant="destructive"
-                    onClick={() => removeMember(member.id)}
+                    onClick={() => removeMember(member.user_id)}
                   >
                     Remove
                   </Button>
