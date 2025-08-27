@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { api } from "@/lib/api.ts";
-import { ThemeToggle } from "@/components/theme-toggle.tsx";
 import {
   Table,
   TableBody,
@@ -53,7 +52,6 @@ export const ClusterListPage = () => {
   return (
     <div className="p-6">
       <h1 className="text-2xl font-bold mb-4">Clusters</h1>
-      <ThemeToggle />
       <Table>
         <TableHeader>
           <TableRow>

@@ -1,11 +1,18 @@
 import {
+  BoxesIcon,
   BrainCogIcon,
   Building2Icon,
   BuildingIcon,
+  ComponentIcon,
+  FileKey2Icon,
   HomeIcon,
   KeyIcon,
+  ListTodoIcon,
+  LockKeyholeIcon,
   ServerIcon,
   SettingsIcon,
+  SprayCanIcon,
+  TagsIcon,
   UsersIcon,
 } from "lucide-react";
 import { AiOutlineCluster } from "react-icons/ai";
@@ -25,22 +32,58 @@ export const items = [
         to: "/core/cluster",
         icon: AiOutlineCluster,
       },
+      {
+        label: "Node Pools",
+        icon: BoxesIcon,
+        to: "/core/node-pools",
+      },
+      {
+        label: "Labels",
+        icon: TagsIcon,
+        to: "/core/labels",
+      },
+      {
+        label: "Roles",
+        icon: ComponentIcon,
+        to: "/core/roles",
+      },
+      {
+        label: "Taints",
+        icon: SprayCanIcon,
+        to: "/core/taints",
+      },
+      {
+        label: "Servers",
+        icon: ServerIcon,
+        to: "/core/servers",
+      },
     ],
+  },
+  {
+    label: "Security",
+    icon: LockKeyholeIcon,
+    items: [
+      {
+        label: "Keys & Tokens",
+        icon: KeyIcon,
+        to: "/security/keys",
+      },
+      {
+        label: "SSH Keys",
+        to: "/security/ssh",
+        icon: FileKey2Icon,
+      },
+    ],
+  },
+  {
+    label: "Tasks",
+    icon: ListTodoIcon,
+    items: [],
   },
   {
     label: "Settings",
     icon: SettingsIcon,
     items: [
-      {
-        label: "Credentials",
-        to: "/settings/credentials",
-        icon: KeyIcon,
-      },
-      {
-        label: "Servers",
-        to: "/settings/servers",
-        icon: ServerIcon,
-      },
       {
         label: "Organizations",
         icon: Building2Icon,
