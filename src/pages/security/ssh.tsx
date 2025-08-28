@@ -145,7 +145,9 @@ export const SshKeysPage = () => {
       });
 
       if (res.status !== 200) {
-        const msg = await (res.data as Blob).text().catch(() => "download failed");
+        const msg = await (res.data as Blob)
+          .text()
+          .catch(() => "download failed");
         throw new Error(msg);
       }
 
@@ -342,7 +344,7 @@ export const SshKeysPage = () => {
               <TableBody>
                 {filtered.map((sshKey) => {
                   const keyType = getKeyType(sshKey.public_keys);
-                  const truncated = truncateMiddle(sshKey.public_keys, 20);
+                  const truncated = truncateMiddle(sshKey.public_keys, 18);
                   return (
                     <TableRow key={sshKey.id}>
                       <TableCell className="align-top">{sshKey.name}</TableCell>

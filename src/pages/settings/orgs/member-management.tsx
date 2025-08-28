@@ -30,6 +30,7 @@ export const MemberManagement = () => {
       <Table>
         <TableHeader>
           <TableRow>
+            <TableHead>Name</TableHead>
             <TableHead>Email</TableHead>
             <TableHead>Role</TableHead>
             <TableHead />
@@ -39,6 +40,7 @@ export const MemberManagement = () => {
           {members &&
             members.map((member: any) => (
               <TableRow>
+                <TableCell>{member.user.name}</TableCell>
                 <TableCell>{member.user.email}</TableCell>
                 <TableCell>
                   <Badge>{member.role}</Badge>

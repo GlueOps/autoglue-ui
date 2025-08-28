@@ -11,6 +11,8 @@ import { OrgManagement } from "@/pages/settings/orgs/org-management.tsx";
 import { MemberManagement } from "@/pages/settings/orgs/member-management.tsx";
 import { SshKeysPage } from "@/pages/security/ssh.tsx";
 import { ServersPage } from "@/pages/core/servers.tsx";
+import { TaintsPage } from "@/pages/core/taints.tsx";
+import {NodePoolsPage} from "@/pages/core/node-pools.tsx";
 
 export const App = () => (
   <AuthProvider>
@@ -25,7 +27,9 @@ export const App = () => (
                 <DashboardLayout>
                   <Routes>
                     <Route path="/core/cluster" element={<ClusterListPage />} />
+                    <Route path="/core/node-pools" element={<NodePoolsPage />} />
                     <Route path="/core/servers" element={<ServersPage />} />
+                    <Route path="/core/taints" element={<TaintsPage />} />
                     <Route path="/security/ssh" element={<SshKeysPage />} />
                     <Route path="/settings/orgs" element={<OrgManagement />} />
                     <Route
